@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blendarentalscooter.my.id/sitemap.xml
