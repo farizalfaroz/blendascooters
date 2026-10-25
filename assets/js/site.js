@@ -88,7 +88,6 @@
       navLocation: "Lokasi & Kontak",
       footerNav: "Tautan halaman",
       primaryNav: "Navigasi utama",
-      filterAria: "Filter motor",
       breadcrumbAria: "Breadcrumb",
       heroEyebrow: "Rental Resmi & Terpercaya NTT",
       heroTitle: "Sewa Motor Nusa Tenggara Timur",
@@ -117,10 +116,6 @@
         "Dudukan ponsel anti-getar dengan penjepit kokoh & pelindung percikan air. Buka Google Maps, Waze, atau Spotify saat berkendara tanpa takut hp jatuh.",
       fleetEyebrow: "KOLEKSI SKUTER TERBAIK",
       fleetTitle: "Pilihan Armada",
-      filterAll: "Semua",
-      filterMatic: "Matic",
-      filterMaxi: "Maxi",
-      filterRetro: "Retro",
       modelCount: "Pilihan Armada",
       cardRateNote: "/ hari",
       viewDetails: "Lihat Detail",
@@ -328,7 +323,6 @@
       navLocation: "Location & Contact",
       footerNav: "Page links",
       primaryNav: "Main navigation",
-      filterAria: "Filter motorcycles",
       breadcrumbAria: "Breadcrumb",
       heroEyebrow: "Official & Trusted NTT Rental",
       heroTitle: "Motorcycle Rental in East Nusa Tenggara",
@@ -359,10 +353,6 @@
         "A vibration-resistant phone holder with a sturdy grip and splash protection. Use Google Maps, Waze or Spotify while riding.",
       fleetEyebrow: "OUR TOP SCOOTERS",
       fleetTitle: "Our Fleet",
-      filterAll: "All",
-      filterMatic: "Automatic",
-      filterMaxi: "Maxi",
-      filterRetro: "Retro",
       modelCount: "Our Fleet",
       cardRateNote: "/ day",
       viewDetails: "View Details",
@@ -548,7 +538,6 @@
   const pageKeys = { home: "pageHome", motor: "pageMotor", reservation: "pageReservation" };
   const descriptions = { home: "descriptionHome", motor: "descriptionMotor", reservation: "descriptionReservation" };
   let language = readSavedLanguage();
-  let currentFilter = "all";
   let reservationInitialized = false;
 
   function readSavedLanguage() {
@@ -643,10 +632,9 @@
     const grid = document.getElementById("fleet-grid");
     if (!grid) return;
     grid.replaceChildren();
-    const visible = DATA.scooters.filter((model) => currentFilter === "all" || model.category === currentFilter);
+    const visible = DATA.scooters;
     visible.forEach((model) => {
       const card = createElement("article", "vehicle-card stitch-vehicle-card");
-      card.dataset.category = model.category;
       const imageWrap = createElement("div", "vehicle-image-wrap");
       const image = createElement("img", "vehicle-image");
       image.src = model.image;
@@ -677,11 +665,6 @@
     });
     const empty = document.getElementById("fleet-empty");
     if (empty) empty.hidden = visible.length !== 0;
-    document.querySelectorAll("[data-filter]").forEach((button) => {
-      const active = button.dataset.filter === currentFilter;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
     setJsonLd("fleet-itemlist-schema", {
       "@context": "https://schema.org",
       "@type": "ItemList",
@@ -1037,12 +1020,6 @@
       window.addEventListener("resize", updateButtons);
       updateButtons();
     }
-    document.querySelectorAll("[data-filter]").forEach((button) => {
-      button.addEventListener("click", () => {
-        currentFilter = button.dataset.filter;
-        renderFleet();
-      });
-    });
     const year = document.getElementById("current-year");
     if (year) year.textContent = String(new Date().getFullYear());
     wireReservationForm();

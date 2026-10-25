@@ -424,33 +424,6 @@ h3 {
   margin: 0.85rem 0 0;
   color: var(--muted);
 }
-.filter-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 0.3rem;
-  border: 1px solid var(--line);
-  border-radius: var(--pill);
-  background: var(--surface-card);
-}
-.filter-button {
-  min-height: 40px;
-  padding: 0.45rem 0.9rem;
-  border: 0;
-  border-radius: var(--pill);
-  background: transparent;
-  color: var(--ink-soft);
-  font-size: 0.84rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-.filter-button:hover {
-  color: var(--primary);
-}
-.filter-button.is-active {
-  background: var(--secondary);
-  color: #fff;
-}
 .fleet-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1081,13 +1054,6 @@ h3 {
     gap: 1rem;
     margin-bottom: 1.35rem;
   }
-  .filter-group {
-    max-width: 100%;
-    overflow-x: auto;
-  }
-  .filter-button {
-    white-space: nowrap;
-  }
   .fleet-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.7rem;
@@ -1531,16 +1497,6 @@ h3 {
   min-height: 39px;
   padding: 0.5rem 0.6rem;
   font-size: 0.78rem;
-}
-.filter-group {
-  padding: 0.25rem;
-  border: 1px solid #e2e8f0;
-  background: #fff;
-}
-.filter-button.is-active {
-  border-color: var(--primary);
-  background: var(--primary);
-  color: #fff;
 }
 .gallery-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
