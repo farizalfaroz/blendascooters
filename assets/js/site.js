@@ -172,6 +172,7 @@
       directions: "Petunjuk Arah ↗",
       footerDescription:
         "Blenda Rent Scooter adalah pusat rental motor Pulau Sumba terpercaya. Sewa motor Sumba dengan unit terawat dan helm bersih siap pakai.",
+      footerDevelopedBy: "Dikembangkan",
       footerQuick: "Tautan Kilat",
       dailyRate: "Harian",
       perDay: "/ hari",
@@ -409,6 +410,7 @@
       directions: "Get Directions ↗",
       footerDescription:
         "Blenda Rent Scooter is a trusted motorcycle rental center on Sumba Island. Rent a scooter with well-maintained motorcycles and clean helmets.",
+      footerDevelopedBy: "Developed by",
       footerQuick: "Quick Links",
       dailyRate: "Daily",
       perDay: "/ day",
