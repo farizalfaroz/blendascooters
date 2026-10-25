@@ -2,7 +2,7 @@
 window.BLENDA_DATA = {
   whatsappNumber: "6282236431311",
   billingMode: "24-hour-blocks",
-  scooters: [
+  scooter: [
     { slug: "scoopy", name: "Honda Scoopy 110 cc", image: "assets/images/motor/scoopy.jpg", ratePerDay: 130000, engine: "110 CC", tagline: "Retro Stylish", year: "2024" },
     { slug: "beat", name: "Honda Beat 110 cc", image: "assets/images/motor/beat.webp", ratePerDay: 130000, engine: "110 CC", tagline: "Modern Retro", year: "2024" },
     { slug: "vario-125", name: "Honda Vario 125 cc", image: "assets/images/motor/vario.webp", ratePerDay: 150000, engine: "125 CC", tagline: "Lincah & Bertenaga", year: "2024" },

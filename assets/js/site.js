@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  const DATA = window.BLENDA_DATA || { whatsappNumber: "", billingMode: null, scooters: [], gallery: [] };
+  const DATA = window.BLENDA_DATA || { whatsappNumber: "", billingMode: null, scooter: [], gallery: [] };
 
   const absoluteUrl = (path) => new URL(path, window.location.href).href;
 
@@ -64,21 +64,21 @@
   }
   const TEXT = {
     id: {
-      pageHome: "Sewa Motor Sumba & NTT | Blenda Scooters Tambolaka",
-      pageMotor: "Rental Motor Sumba | Blenda Scooters Tambolaka",
-      pageReservation: "Booking Sewa Motor Sumba | Blenda Scooters",
+      pageHome: "Rental Motor Pulau Sumba | Blenda Rent Scooter",
+      pageMotor: "Rental Motor Pulau Sumba | Blenda Rent Scooter",
+      pageReservation: "Sewa Motor Sumba | Booking Blenda Rent Scooter",
       descriptionHome:
-        "Rental motor resmi di Tambolaka, Sumba Barat Daya. Sewa Scoopy, Vario, PCX, ADV, CRF dengan helm SNI, jas hujan, dan antar-jemput gratis. Booking via WhatsApp.",
+        "Rental motor Pulau Sumba resmi dari Blenda Rent Scooter di Tambolaka. Sewa motor Sumba harian/mingguan dengan helm SNI, jas hujan, dan antar-jemput gratis.",
       descriptionMotor:
-        "Detail dan tarif sewa motor Blenda Scooters di Tambolaka, Sumba. Pilih unit Scoopy, Vario, PCX, ADV, atau CRF dan booking langsung via WhatsApp.",
+        "Sewa motor Sumba di Tambolaka bersama Blenda Rent Scooter. Cek tarif rental motor Pulau Sumba harian, mingguan, dan bulanan, lalu booking via WhatsApp.",
       descriptionReservation:
-        "Booking sewa motor di Tambolaka, Sumba. Isi tanggal, pilih unit, dan kirim permintaan reservasi Blenda Scooters langsung melalui WhatsApp.",
+        "Booking sewa motor Sumba dengan Blenda Rent Scooter di Tambolaka. Isi tanggal, pilih unit rental motor Pulau Sumba, lalu kirim permintaan via WhatsApp.",
       skip: "Langsung ke konten",
       menu: "Menu",
       openMenu: "Buka navigasi",
       closeMenu: "Tutup navigasi",
       languageAria: "Ganti bahasa ke English",
-      brandHome: "Blenda Scooters beranda",
+      brandHome: "Blenda Scooter beranda",
       navHome: "Beranda",
       navFleet: "Armada Motor",
       navGallery: "Galeri",
@@ -89,21 +89,21 @@
       footerNav: "Tautan halaman",
       primaryNav: "Navigasi utama",
       breadcrumbAria: "Breadcrumb",
-      heroEyebrow: "Rental Resmi & Terpercaya NTT",
-      heroTitle: "Sewa Motor Pulau Sumba",
-      heroBrand: "Blenda Scooters",
+      heroEyebrow: "Rental Motor Pulau Sumba",
+      heroTitle: "Sewa Motor Sumba",
+      heroBrand: "Blenda Rent Scooter",
       heroLead:
-        "Jelajahi keindahan alam Pulau Sumba dengan armada prima terawat. Sewa motor mudah, cepat, dan praktis—siap diantar langsung ke lokasi Anda di Sumba.",
+        "Jelajahi keindahan Pulau Sumba dengan armada prima terawat. Sewa motor Sumba mudah, cepat, dan praktis siap diantar langsung ke lokasi Anda.",
       browseFleet: "Pilih Armada",
       whatsapp: "WhatsApp",
-      heroFootnote: "Paket wisata Overland NTT / Sumba ·",
-      heroPhotoAlt: "Rental motor dan perjalanan di Sumba bersama Blenda Scooters",
+      heroFootnote: "Paket wisata Overland Pulau Sumba ·",
+      heroPhotoAlt: "Rental motor Pulau Sumba bersama Blenda Rent Scooter",
       tourPackage: "Paket Wisata",
-      tourName: "Paket Overland NTT / Sumba",
+      tourName: "Paket Overland Pulau Sumba",
       perksEyebrow: "FASILITAS STANDAR MEWAH",
-      processTitle: "Kenapa Memilih Blenda Rental Scooters?",
+      processTitle: "Kenapa Memilih Blenda Rent Scooter?",
       perksLead:
-        "Semua sewa sudah termasuk perlengkapan premium gratis demi kenyamanan, keselamatan, dan kebebasan berkendara Anda selama berlibur di NTT.",
+        "Semua sewa sudah termasuk perlengkapan premium gratis demi kenyamanan, keselamatan, dan kebebasan berkendara Anda selama berlibur di Pulau Sumba.",
       perkOneTag: "Bersih Terjamin",
       perkOneTitle: "Free Helm SNI Bersih",
       perkOneText: "Disediakan 2 unit helm berstandar SNI yang bersih, dicuci, dan wangi setiap pergantian penyewa.",
@@ -121,12 +121,12 @@
       viewDetails: "Lihat Detail",
       rentNow: "Sewa Sekarang",
       galleryEyebrow: "DOKUMENTASI",
-      galleryTitle: "Galeri Blenda Scooters",
-      galleryLead: "Foto perjalanan dan armada Blenda Scooters.",
+      galleryTitle: "Galeri Blenda Scooter",
+      galleryLead: "Foto perjalanan dan armada Blenda Scooter.",
       reviewsEyebrow: "ULASAN PENGENDARA",
       reviewsTitle: "Apa Kata Mereka yang Sudah Sewa?",
       reviewOne:
-        "“Pelayanan Blenda Scooters juara banget! Motor Honda Scoopy diantar langsung ke villa tepat waktu. Helmnya wangi dan bersih, gak ada bau apek.”",
+        "“Pelayanan Blenda Scooter juara banget! Motor Honda Scoopy diantar langsung ke villa tepat waktu. Helmnya wangi dan bersih, gak ada bau apek.”",
       reviewOneFrom: "Wisatawan dari Jakarta",
       reviewTwo: "“Komunikasi WhatsApp cepat dengan bahasa Inggris yang baik.”",
       reviewTwoFrom: "Wisatawan",
@@ -140,8 +140,8 @@
       reviewFiveName: "Dewi Lestari",
       reviewFiveFrom: "Wisatawan",
       faqTitle: "Pertanyaan yang Sering Diajukan",
-      faqLead: "Semua hal penting seputar sewa motor di NTT & Sumba yang perlu Anda ketahui sebelum memesan.",
-      faqQ1: "Apa saja syarat untuk sewa motor di Blenda Scooters?",
+      faqLead: "Semua hal penting seputar sewa motor di Pulau Sumba yang perlu Anda ketahui sebelum memesan.",
+      faqQ1: "Apa saja syarat untuk sewa motor di Blenda Scooter?",
       faqA1:
         "Cukup KTP asli / Paspor untuk WNA, SIM C aktif, dan bukti tiket penerbangan atau reservasi penginapan di Sumba. Tanpa jaminan uang tunai atau deposit rumit.",
       faqQ2: "Apakah ada biaya antar-jemput motor ke penginapan?",
@@ -160,7 +160,7 @@
       faqContactText: "Hubungi tim support WhatsApp kami yang siap melayani 24/7.",
       faqContactCta: "Tanya WhatsApp",
       locationEyebrow: "TEMUKAN KAMI",
-      locationTitle: "Kunjungi Blenda Scooters",
+      locationTitle: "Kunjungi Blenda Scooter",
       footerLocationTitle: "Lokasi & Jam Kerja",
       addressLabel: "Alamat Kantor & Garasi",
       addressText: "Kota Tambolaka, Sumba Barat Daya, Pulau Sumba",
@@ -171,7 +171,7 @@
       openMaps: "Buka di Google Maps",
       directions: "Petunjuk Arah ↗",
       footerDescription:
-        "Pusat persewaan motor terpercaya di Pulau Sumba. Nikmati petualangan menjelajahi keindahan Pulau Sumba dengan unit terawat dan helm bersih siap pakai.",
+        "Blenda Rent Scooter adalah pusat rental motor Pulau Sumba terpercaya. Sewa motor Sumba dengan unit terawat dan helm bersih siap pakai.",
       footerQuick: "Tautan Kilat",
       dailyRate: "Harian",
       perDay: "/ hari",
@@ -207,7 +207,7 @@
       simpleTermsTitle: "Syarat Mudah:",
       simpleTermsText: "Cukup titip KTP / Paspor fisik asli selama durasi masa sewa berlaku.",
       startBooking: "Booking",
-      heroCaption: "Paket Overland NTT / Sumba",
+      heroCaption: "Paket Overland Pulau Sumba",
       processEyebrow: "FASILITAS STANDAR MEWAH",
       stepOne: "Pilih motor yang sesuai perjalanan.",
       stepTwo: "Masukkan tanggal dan lokasi rencana.",
@@ -235,9 +235,9 @@
       detailNotice:
         "Setiap unit motor yang Anda sewa dari Blenda Rental otomatis dilengkapi kelengkapan premium tanpa biaya tersembunyi.",
       reservationEyebrow: "BOOKING CEPAT • LANGSUNG SIAP GAS DI TAMBOLAKA",
-      reservationTitle: "Formulir Booking",
+      reservationTitle: "Booking Sewa Motor Sumba",
       reservationLead:
-        "Isi data pemesanan di bawah, konfirmasi instan langsung terhubung ke admin WhatsApp kami tanpa ribet.",
+        "Isi data pemesanan sewa motor Sumba di bawah, konfirmasi instan langsung terhubung ke admin WhatsApp Blenda Rent Scooter tanpa ribet.",
       formUnitTitle: "Pilih Unit Scooter Favoritmu",
       modelLabel: "Motor",
       selectModel: "Pilih motor",
@@ -245,7 +245,7 @@
       nameLabel: "Nama lengkap",
       namePlaceholder: "cth. Sarah Wijaya / Alex Turner",
       availableModels: "Tersedia 7 Model",
-      unitIntro: "Pilih unit sesuai gaya berkendara dan kebutuhan jelajah Anda di NTT.",
+      unitIntro: "Pilih unit sesuai gaya berkendara dan kebutuhan jelajah Anda di Pulau Sumba.",
       formDatesTitle: "Durasi Sewa",
       startLabel: "Tanggal & Waktu Mulai",
       endLabel: "Tanggal & Waktu Selesai",
@@ -286,7 +286,7 @@
       whatsappMissing: "Kontak WhatsApp bisnis belum dikonfigurasi. Permintaan belum dikirim.",
       whatsappInvalid: "Kontak WhatsApp belum valid. Permintaan belum dikirim.",
       sendingError: "Permintaan belum dapat dibuka. Silakan coba lagi.",
-      messageHello: "Halo Blenda Scooters, saya ingin mengajukan permintaan sewa.",
+      messageHello: "Halo Blenda Scooter, saya ingin mengajukan permintaan sewa.",
       messageName: "Nama",
       messageModel: "Motor",
       messageStart: "Mulai",
@@ -299,21 +299,21 @@
       modelCount: "Pilihan motor",
     },
     en: {
-      pageHome: "Motorcycle Rental in Sumba & NTT | Blenda Scooters",
-      pageMotor: "Motorcycle Rental Sumba | Blenda Scooters Tambolaka",
-      pageReservation: "Motorcycle Rental Booking Sumba | Blenda Scooters",
+      pageHome: "Motorcycle Rental Sumba Island | Blenda Rent Scooter",
+      pageMotor: "Motorcycle Rental Sumba Island | Blenda Rent Scooter",
+      pageReservation: "Motorcycle Rental Booking Sumba | Blenda Rent Scooter",
       descriptionHome:
-        "Official motorcycle rental in Tambolaka, Southwest Sumba. Rent Scoopy, Vario, PCX, ADV, CRF with SNI helmets, raincoats, and free delivery. Book via WhatsApp.",
+        "Official motorcycle rental on Sumba Island from Blenda Rent Scooter in Tambolaka. Rent a scooter with SNI helmets, raincoats, and free delivery. Book via WhatsApp.",
       descriptionMotor:
-        "View motorcycle details and rental rates from Blenda Scooters in Tambolaka, Sumba. Choose Scoopy, Vario, PCX, ADV, or CRF and book via WhatsApp.",
+        "Rent a motorcycle on Sumba Island with Blenda Rent Scooter in Tambolaka. View daily, weekly, and monthly motorcycle rental rates and book via WhatsApp.",
       descriptionReservation:
-        "Book a motorcycle rental in Tambolaka, Sumba. Choose your dates, select a unit, and send your reservation request to Blenda Scooters via WhatsApp.",
+        "Book a motorcycle rental on Sumba Island with Blenda Rent Scooter. Choose your dates, select a unit, and send your request via WhatsApp.",
       skip: "Skip to content",
       menu: "Menu",
       openMenu: "Open navigation",
       closeMenu: "Close navigation",
       languageAria: "Switch language to Indonesian",
-      brandHome: "Blenda Scooters home",
+      brandHome: "Blenda Scooter home",
       navHome: "Home",
       navFleet: "Fleet",
       navGallery: "Gallery",
@@ -324,21 +324,21 @@
       footerNav: "Page links",
       primaryNav: "Main navigation",
       breadcrumbAria: "Breadcrumb",
-      heroEyebrow: "Official & Trusted NTT Rental",
-      heroTitle: "Motorcycle Rental in Sumba",
-      heroBrand: "Blenda Scooters",
+      heroEyebrow: "Sumba Island Motorcycle Rental",
+      heroTitle: "Motorcycle Rental Sumba Island",
+      heroBrand: "Blenda Rent Scooter",
       heroLead:
-        "Explore the natural beauty of Sumba with a well-maintained fleet. Easy, quick and practical motorcycle rental, delivered directly to your location in Sumba.",
+        "Explore the natural beauty of Sumba Island with a well-maintained fleet. Easy, quick and practical motorcycle rental, delivered directly to your location.",
       browseFleet: "Choose a Motorcycle",
       whatsapp: "WhatsApp",
-      heroFootnote: "NTT / Sumba Overland Tour · ★ 4.9/5",
-      heroPhotoAlt: "Motorcycle rental and travel in Sumba with Blenda Scooters",
+      heroFootnote: "Sumba Island Overland Tour · ★ 4.9/5",
+      heroPhotoAlt: "Motorcycle rental on Sumba Island with Blenda Rent Scooter",
       tourPackage: "Tour Package",
-      tourName: "NTT / Sumba Overland Package",
+      tourName: "Sumba Island Overland Package",
       perksEyebrow: "PREMIUM STANDARD FACILITIES",
-      processTitle: "Why Choose Blenda Rental Scooters?",
+      processTitle: "Why Choose Blenda Rent Scooter?",
       perksLead:
-        "Every rental includes premium gear at no extra cost, for your comfort, safety and freedom as you explore NTT.",
+        "Every rental includes premium gear at no extra cost, for your comfort, safety and freedom as you explore Sumba Island.",
       perkOneTag: "Guaranteed Hygiene",
       perkOneTitle: "Free Sterilized SNI Helmets",
       perkOneText:
@@ -351,19 +351,19 @@
       perkThreeTitle: "Free Phone Holder",
       perkThreeText:
         "A vibration-resistant phone holder with a sturdy grip and splash protection. Use Google Maps, Waze or Spotify while riding.",
-      fleetEyebrow: "OUR TOP SCOOTERS",
+      fleetEyebrow: "OUR TOP SCOOTER",
       fleetTitle: "Our Fleet",
       modelCount: "Our Fleet",
       cardRateNote: "/ day",
       viewDetails: "View Details",
       rentNow: "Rent Now",
       galleryEyebrow: "DOCUMENTATION",
-      galleryTitle: "Blenda Scooters Gallery",
-      galleryLead: "Photos of Blenda Scooters trips and fleet.",
+      galleryTitle: "Blenda Scooter Gallery",
+      galleryLead: "Photos of Blenda Scooter trips and fleet.",
       reviewsEyebrow: "RIDER REVIEWS",
       reviewsTitle: "What Do Our Riders Say?",
       reviewOne:
-        "“Blenda Scooters service is fantastic! The Honda Scoopy was delivered to the villa on time. The helmet was fresh and clean.”",
+        "“Blenda Scooter service is fantastic! The Honda Scoopy was delivered to the villa on time. The helmet was fresh and clean.”",
       reviewOneFrom: "Visitor from Jakarta",
       reviewTwo: "“Fast WhatsApp communication in perfect English.”",
       reviewTwoFrom: "Visitor",
@@ -377,8 +377,8 @@
       reviewFiveName: "Dewi Lestari",
       reviewFiveFrom: "Wisatawan",
       faqTitle: "Frequently Asked Questions",
-      faqLead: "Everything you need to know about renting a motorcycle in NTT and Sumba before booking.",
-      faqQ1: "What do I need to rent a motorcycle from Blenda Scooters?",
+      faqLead: "Everything you need to know about renting a motorcycle on Sumba Island before booking.",
+      faqQ1: "What do I need to rent a motorcycle from Blenda Scooter?",
       faqA1:
         "Just an original ID card or passport for foreign nationals, a valid motorcycle license, and proof of flight or accommodation booking in Sumba. No cash guarantee or complicated deposit is required.",
       faqQ2: "Is motorcycle delivery and pickup to my accommodation free?",
@@ -397,7 +397,7 @@
       faqContactText: "Contact our WhatsApp support team, available 24/7.",
       faqContactCta: "Ask on WhatsApp",
       locationEyebrow: "FIND US",
-      locationTitle: "Visit Blenda Scooters",
+      locationTitle: "Visit Blenda Scooter",
       footerLocationTitle: "Location & Opening Hours",
       addressLabel: "Office & Garage",
       addressText: "Tambolaka, Sumba Island",
@@ -408,7 +408,7 @@
       openMaps: "Open in Google Maps",
       directions: "Get Directions ↗",
       footerDescription:
-        "A trusted motorcycle rental center in Sumba. Explore the beauty of Sumba with well-maintained motorcycles and clean helmets.",
+        "Blenda Rent Scooter is a trusted motorcycle rental center on Sumba Island. Rent a scooter with well-maintained motorcycles and clean helmets.",
       footerQuick: "Quick Links",
       dailyRate: "Daily",
       perDay: "/ day",
@@ -442,7 +442,7 @@
       simpleTermsTitle: "Simple Requirements:",
       simpleTermsText: "Leave your original ID card or passport with us for the duration of your rental.",
       startBooking: "Booking",
-      heroCaption: "NTT / Sumba Overland Package",
+      heroCaption: "Sumba Island Overland Package",
       processEyebrow: "PREMIUM STANDARD FACILITIES",
       stepOne: "Choose a motorcycle for your trip.",
       stepTwo: "Enter your dates and planned location.",
@@ -470,8 +470,8 @@
       beforeBooking: "COMPLIMENTARY FACILITIES",
       detailNotice: "Every motorcycle rented from Blenda Rental comes with premium essentials at no hidden cost.",
       reservationEyebrow: "QUICK BOOKING • READY TO RIDE IN TAMBOLAKA",
-      reservationTitle: "Booking Form",
-      reservationLead: "Enter your booking details below and connect instantly with our WhatsApp admin.",
+      reservationTitle: "Booking a Motorcycle on Sumba Island",
+      reservationLead: "Enter your booking details below and connect instantly with the Blenda Rent Scooter WhatsApp admin.",
       formUnitTitle: "Choose Your Favorite Scooter",
       modelLabel: "Motorcycle",
       selectModel: "Choose a motorcycle",
@@ -479,7 +479,7 @@
       nameLabel: "Full name",
       namePlaceholder: "e.g. Sarah Wijaya / Alex Turner",
       availableModels: "7 Models Available",
-      unitIntro: "Choose a motorcycle for your riding style and NTT trip.",
+      unitIntro: "Choose a motorcycle for your riding style and Sumba Island trip.",
       formDatesTitle: "Rental Duration",
       startLabel: "Pickup Date & Time",
       endLabel: "Return Date & Time",
@@ -520,7 +520,7 @@
       whatsappMissing: "Blenda's WhatsApp contact is not configured. The request was not sent.",
       whatsappInvalid: "The WhatsApp contact is invalid. The request was not sent.",
       sendingError: "The request could not be opened. Please try again.",
-      messageHello: "Hello Blenda Scooters, I would like to request a rental.",
+      messageHello: "Hello Blenda Scooter, I would like to request a rental.",
       messageName: "Name",
       messageModel: "Motorcycle",
       messageStart: "Start",
@@ -598,11 +598,10 @@
         start && end && new Date(end) <= new Date(start) ? phrase("dateOrderError") : "",
       );
     }
-    const languageButton = document.getElementById("language-toggle");
-    if (languageButton) {
+    document.querySelectorAll(".language-toggle").forEach((languageButton) => {
       languageButton.textContent = language === "id" ? "EN" : "ID";
       languageButton.setAttribute("aria-label", phrase("languageAria"));
-    }
+    });
     try {
       localStorage.setItem("blenda-language", language);
     } catch (_) {
@@ -632,7 +631,7 @@
     const grid = document.getElementById("fleet-grid");
     if (!grid) return;
     grid.replaceChildren();
-    const visible = DATA.scooters;
+    const visible = DATA.scooter;
     visible.forEach((model) => {
       const card = createElement("article", "vehicle-card stitch-vehicle-card");
       const imageWrap = createElement("div", "vehicle-image-wrap");
@@ -668,7 +667,7 @@
     setJsonLd("fleet-itemlist-schema", {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: language === "en" ? "Blenda Scooters Fleet" : "Pilihan Armada Blenda Scooters",
+      name: language === "en" ? "Blenda Scooter Fleet" : "Pilihan Armada Blenda Scooter",
       itemListElement: visible.map((model, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -709,7 +708,7 @@
 
   function selectedModel() {
     const slug = new URLSearchParams(window.location.search).get("model");
-    return DATA.scooters.find((model) => model.slug === slug) || null;
+    return DATA.scooter.find((model) => model.slug === slug) || null;
   }
 
   function renderMotorDetail() {
@@ -724,7 +723,8 @@
       return;
     }
     setMetaContent('meta[name="robots"]', "index, follow, max-image-preview:large");
-    document.getElementById("motor-title").textContent = model.name;
+    document.getElementById("motor-title").textContent =
+      language === "en" ? `${model.name} | Motorcycle Rental Sumba` : `${model.name} | Sewa Motor Sumba`;
     document.getElementById("breadcrumb-model").textContent = model.name;
     document.getElementById("motor-engine").textContent = model.engine || "";
     document.getElementById("motor-tagline").textContent = model.tagline || "";
@@ -741,15 +741,15 @@
     const imageUrl = absoluteUrl(model.image);
     const title =
       language === "en"
-        ? `${model.name} Rental in Sumba | Blenda Scooters`
-        : `Sewa ${model.name} di Sumba | Blenda Scooters`;
+        ? `${model.name} | Motorcycle Rental Sumba Island | Blenda Rent Scooter`
+        : `${model.name} | Sewa Motor Sumba | Blenda Rent Scooter`;
     const description =
       language === "en"
-        ? `Rent ${model.name} (${model.engine}) in Tambolaka, Sumba from ${formatCurrency(model.ratePerDay)} per day. SNI helmets, raincoats, delivery, and 24/7 support.`
-        : `Sewa ${model.name} (${model.engine}) di Tambolaka, Sumba mulai ${formatCurrency(model.ratePerDay)} per hari. Helm SNI, jas hujan, antar-jemput, dan bantuan 24/7.`;
+        ? `Rent ${model.name} (${model.engine}) in Tambolaka, Sumba Island from ${formatCurrency(model.ratePerDay)} per day. Motorcycle rental with SNI helmets, raincoats, delivery, and 24/7 support from Blenda Rent Scooter.`
+        : `Sewa ${model.name} (${model.engine}) di Tambolaka, Pulau Sumba mulai ${formatCurrency(model.ratePerDay)} per hari. Rental motor Pulau Sumba dengan helm SNI, jas hujan, antar-jemput, dan bantuan 24/7.`;
 
     setPageMeta({ title, description, canonical, image: imageUrl, type: "product" });
-    setMetaContent('meta[property="og:image:alt"]', `${model.name} - Blenda Scooters`);
+    setMetaContent('meta[property="og:image:alt"]', `${model.name} - Blenda Rent Scooter`);
     setJsonLd("motor-product-schema", {
       "@context": "https://schema.org",
       "@type": "Product",
@@ -758,7 +758,7 @@
       description: description,
       sku: model.slug,
       category: "Motorcycle Rental",
-      brand: { "@type": "Brand", name: "Blenda Scooters" },
+      brand: { "@type": "Brand", name: "Blenda Rent Scooter" },
       offers: {
         "@type": "Offer",
         url: canonical,
@@ -766,7 +766,7 @@
         price: model.ratePerDay,
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/UsedCondition",
-        seller: { "@type": "AutoRental", name: "Blenda Scooters" },
+        seller: { "@type": "AutoRental", name: "Blenda Rent Scooter" },
       },
     });
     setJsonLd("motor-breadcrumb-schema", {
@@ -827,13 +827,13 @@
     const firstOption = select.options[0];
     select.replaceChildren(firstOption);
     firstOption.textContent = phrase("selectModel");
-    DATA.scooters.forEach((model) => {
+    DATA.scooter.forEach((model) => {
       const option = document.createElement("option");
       option.value = model.slug;
       option.textContent = `${model.name} — ${formatCurrency(model.ratePerDay)} ${phrase("perDay")}`;
       select.append(option);
     });
-    if (desiredSlug && DATA.scooters.some((model) => model.slug === desiredSlug)) select.value = desiredSlug;
+    if (desiredSlug && DATA.scooter.some((model) => model.slug === desiredSlug)) select.value = desiredSlug;
     reservationInitialized = true;
     updateReservationSummary();
   }
@@ -841,7 +841,7 @@
   function updateReservationSummary() {
     const form = document.getElementById("booking-form");
     if (!form) return;
-    const model = DATA.scooters.find((item) => item.slug === form.elements.model.value) || null;
+    const model = DATA.scooter.find((item) => item.slug === form.elements.model.value) || null;
     const startInput = form.elements.start;
     const endInput = form.elements.end;
     const summaryModel = document.getElementById("summary-model");
@@ -874,7 +874,7 @@
         typeof model.ratePerDay === "number" ? formatCurrency(model.ratePerDay) : phrase("ratePending");
     } else {
       summaryImage.src = "assets/images/motor/scoopy.jpg";
-      summaryImage.alt = "Motor Honda Scoopy untuk rental di Sumba - Blenda Scooters";
+      summaryImage.alt = "Motor Honda Scoopy untuk rental di Sumba - Blenda Scooter";
       summaryRate.textContent = phrase("ratePending");
     }
     const days = billableDays(start, end);
@@ -910,7 +910,7 @@
   }
 
   function buildMessage(form) {
-    const model = DATA.scooters.find((item) => item.slug === form.elements.model.value);
+    const model = DATA.scooter.find((item) => item.slug === form.elements.model.value);
     const startValue = form.elements.start.value;
     const endValue = form.elements.end.value;
     const locationValue = form.elements.location.value.trim();
@@ -960,7 +960,7 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
-      if (!DATA.scooters.some((model) => model.slug === form.elements.model.value)) {
+      if (!DATA.scooter.some((model) => model.slug === form.elements.model.value)) {
         showStatus(phrase("modelRequired"), true, "modelRequired");
         return;
       }
@@ -979,8 +979,9 @@
   }
 
   function wireControls() {
-    const languageButton = document.getElementById("language-toggle");
-    if (languageButton) languageButton.addEventListener("click", () => setLanguage(language === "id" ? "en" : "id"));
+    document.querySelectorAll(".language-toggle").forEach((languageButton) => {
+      languageButton.addEventListener("click", () => setLanguage(language === "id" ? "en" : "id"));
+    });
     const menuButton = document.getElementById("menu-toggle");
     const nav = document.getElementById("primary-nav");
     if (menuButton && nav) {

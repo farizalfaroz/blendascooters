@@ -154,6 +154,14 @@ h3 {
   justify-content: space-between;
   gap: 1rem;
 }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.language-toggle-mobile {
+  display: none;
+}
 .wordmark {
   display: inline-flex;
   align-items: center;
@@ -1011,9 +1019,15 @@ h3 {
   .nav-cta {
     justify-content: center;
   }
-  .language-toggle {
-    align-self: flex-start;
-    margin-top: 0.35rem;
+  .primary-nav .language-toggle {
+    display: none;
+  }
+  .language-toggle.language-toggle-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 46px;
+    min-height: 44px;
   }
   .hero {
     padding-block: 2.5rem 3.5rem;
